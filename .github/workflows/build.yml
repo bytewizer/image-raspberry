@@ -1,0 +1,54 @@
+name: build
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+
+jobs:
+  machine-matrix:
+    runs-on: ubuntu-22.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        machine: [raspberrypi3-64, raspberrypi4-64]
+
+    steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@v6
+        with:
+          root-reserve-mb: 2048
+          swap-size-mb: 1024
+          temp-reserve-mb: 1024
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Clone required repos
+        run: ./repo-mgr.sh init
+
+      - name: Run build in container
+        run: |
+          docker run --rm -t -v $(pwd):/workdir -e MACHINE=${{ matrix.machine }} crops/poky:ubuntu-22.04 --workdir=/workdir /workdir/run-build.sh
+          find build/tmp/deploy/images/${{ matrix.machine }} -type l -delete
+
+      - name: Save build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.machine }}-artifacts
+          path: build/tmp/deploy/images/${{ matrix.machine }}/
+
+      - name: Disk space report after build
+        run: |
+          echo "Memory and swap:"
+          free
+          echo
+          swapon --show
+          echo
+          echo "Available storage:"
+          df -h
+          echo
