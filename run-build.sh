@@ -14,7 +14,6 @@ LOCAL_CONF_STR="# Added by run-build script"
 
 # Add BSP layer
 bitbake-layers add-layer ../poky/meta-raspberrypi
-bitbake-layers add-layer ../poky/meta-intel
 
 if ! grep -q "$LOCAL_CONF_STR" $LOCAL_CONF
 then
