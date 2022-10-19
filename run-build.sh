@@ -35,4 +35,4 @@ then
 fi
 
 # Build
-bitbake $IMAGE
+#bitbake $IMAGE

@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        machine: [raspberrypi3-64, raspberrypi4-64]
+        machine: [raspberrypi3-64]
 
     steps:
       - name: Maximize build space
