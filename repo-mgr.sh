@@ -24,14 +24,15 @@ _clone() {
             fi
         fi
 
-        mkdir -p ${repo_dirs[$i]}
-        pushd ${repo_dirs[$i]} > /dev/null
-        git init
-        git remote add origin ${repo_urls[$i]}
-        git fetch origin
-        git checkout -b ${repo_branch[$i]}
-        popd > /dev/null
-
+        #mkdir -p ${repo_dirs[$i]}
+        #pushd ${repo_dirs[$i]} > /dev/null
+        # git init
+        # git remote add origin ${repo_urls[$i]}
+        # git fetch origin
+        # git checkout -b ${repo_branch[$i]}
+        
+        git clone -b ${repo_branch[$i]} ${repo_urls[$i]} ${repo_dirs[$i]}
+        #popd > /dev/null
         echo ""
     done
 }
@@ -46,6 +47,15 @@ _parse_conf() {
     repo_urls=( $(grep ^repository $conf_file | cut -d ',' -f2) )
     repo_dirs=( $(grep ^repository $conf_file | cut -d ',' -f3) )
     repo_branch=( $(grep ^repository $conf_file | cut -d ',' -f4) )
+}
+
+install() {
+    echo -e "Installing dependencies\n"
+    sudo apt-get update
+    sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc build-essential \
+        chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils \
+        iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint3 \
+        xterm python3-subunit mesa-common-dev zstd liblz4-tool
 }
 
 init() {
@@ -88,6 +98,10 @@ case $1 in
     init)
         shift
         init "$@"
+        ;;
+    install)
+        shift
+        install "$@"
         ;;
     *)
         echo "Unknown command $1"
