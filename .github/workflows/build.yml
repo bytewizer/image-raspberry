@@ -7,7 +7,6 @@ on:
 
 jobs:
   machine-matrix:
-    timeout-minutes: 360
     runs-on: ubuntu-22.04
 
     strategy:
