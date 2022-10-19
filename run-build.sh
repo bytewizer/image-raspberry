@@ -10,14 +10,14 @@ BUILD_DIR="build"
 # LOCAL_CONF_STR="# Added by run-build script"
 
 # Source build environment
-./poky/oe-init-build-env $BUILD_DIR
+. ./poky/oe-init-build-env $BUILD_DIR
 
 # Add BSP layer
 bitbake-layers add-layer ../poky/meta-raspberrypi
 bitbake-layers add-layer ../poky/meta-openembedded/meta-oe
+bitbake-layers add-layer ../poky/meta-openembedded/meta-python
 bitbake-layers add-layer ../poky/meta-openembedded/meta-networking
 bitbake-layers add-layer ../poky/meta-openembedded/meta-multimedia
-bitbake-layers add-layer ../poky/meta-openembedded/meta-python
 
 # if ! grep -q "$LOCAL_CONF_STR" $LOCAL_CONF
 # then

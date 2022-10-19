@@ -28,13 +28,14 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
 
+      - name: Install required dependencies
+        run: ./repo-mgr.sh install
+
       - name: Clone required repos
         run: ./repo-mgr.sh init
 
       - name: Run build in container
-        run: |
-          docker run --rm -t -v $(pwd):/workdir -e MACHINE=${{ matrix.machine }} crops/poky:ubuntu-22.04 --workdir=/workdir /workdir/run-build.sh
-          find build/tmp/deploy/images/${{ matrix.machine }} -type l -delete
+        run: ./run-build.sh
 
       - name: Save build artifacts
         uses: actions/upload-artifact@v3
