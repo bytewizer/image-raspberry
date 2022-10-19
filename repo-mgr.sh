@@ -29,8 +29,7 @@ _clone() {
         git init
         git remote add origin ${repo_urls[$i]}
         git fetch origin
-        git checkout -q ${repo_heads[$i]}
-        git checkout -b repo-mgr
+        git checkout -b ${repo_branch[$i]}
         popd > /dev/null
 
         echo ""
@@ -46,7 +45,7 @@ _parse_conf() {
     echo -e "Parsing $conf_file\n"
     repo_urls=( $(grep ^repository $conf_file | cut -d ',' -f2) )
     repo_dirs=( $(grep ^repository $conf_file | cut -d ',' -f3) )
-    repo_heads=( $(grep ^repository $conf_file | cut -d ',' -f4) )
+    repo_branch=( $(grep ^repository $conf_file | cut -d ',' -f4) )
 }
 
 init() {
