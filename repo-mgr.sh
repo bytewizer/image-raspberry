@@ -6,7 +6,8 @@ set -e
 _usage() {
     echo "Usage: $0 <command> [OPTIONS]"
     echo "  Commands:"
-    echo "      init - Initialize repositories"
+    echo "      install - Install build dependencies"
+    echo "      init - Initialize build repositories"
     exit 1
 }
 
@@ -23,16 +24,9 @@ _clone() {
                 continue
             fi
         fi
-
-        #mkdir -p ${repo_dirs[$i]}
-        #pushd ${repo_dirs[$i]} > /dev/null
-        # git init
-        # git remote add origin ${repo_urls[$i]}
-        # git fetch origin
-        # git checkout -b ${repo_branch[$i]}
         
         git clone -b ${repo_branch[$i]} ${repo_urls[$i]} ${repo_dirs[$i]}
-        #popd > /dev/null
+
         echo ""
     done
 }

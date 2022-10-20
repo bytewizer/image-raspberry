@@ -13,6 +13,7 @@ BUILD_DIR="build"
 source ./poky/oe-init-build-env $BUILD_DIR
 
 # Add BSP layer
+bitbake-layers add-layer ../meta-reterminal
 bitbake-layers add-layer ../poky/meta-raspberrypi
 bitbake-layers add-layer ../poky/meta-openembedded/meta-oe
 bitbake-layers add-layer ../poky/meta-openembedded/meta-python
