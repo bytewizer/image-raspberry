@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        machine: [raspberrypi3-64]
+        machine: [rterminal-image]
 
     steps:
       - name: Maximize build space
@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.machine }}-artifacts
-          path: build/tmp/deploy/images/${{ matrix.machine }}/
+          path: ./build/tmp/deploy/images/${{ matrix.machine }}/
 
       - name: Disk space report after build
         run: |

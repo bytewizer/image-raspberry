@@ -3,7 +3,7 @@
 # Abort script if any command returns error
 set -e
 
-IMAGE="core-image-base"
+IMAGE="rterminal-image"
 TMP_FILE=".env_check"
 BUILD_DIR="build"
 # LOCAL_CONF="conf/local.conf"
