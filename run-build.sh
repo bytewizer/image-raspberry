@@ -3,7 +3,7 @@
 # Abort script if any command returns error
 set -e
 
-IMAGE="rterminal-image"
+IMAGE="reterminal-image"
 TMP_FILE=".env_check"
 BUILD_DIR="build"
 # LOCAL_CONF="conf/local.conf"
@@ -14,6 +14,8 @@ source ./poky/oe-init-build-env $BUILD_DIR
 
 # Add BSP layer
 bitbake-layers add-layer ../meta-reterminal
+bitbake-layers add-layer ../meta-dotnet
+bitbake-layers add-layer ../meta-rpilinux
 bitbake-layers add-layer ../poky/meta-raspberrypi
 bitbake-layers add-layer ../poky/meta-openembedded/meta-oe
 bitbake-layers add-layer ../poky/meta-openembedded/meta-python

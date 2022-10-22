@@ -1,5 +1,5 @@
-SUMMARY = "seeed reterminal device tree overlay"
-DESCRIPTION = "include all the device dtoverlay of reterminal"
+SUMMARY = "Seeed reterminal device tree overlay"
+DESCRIPTION = "Include all the device dtoverlay of reterminal"
 HOMEPAGE = "https://github.com/Seeed-Studio/seeed-linux-dtoverlays"
 
 LICENSE = "GPLv3"

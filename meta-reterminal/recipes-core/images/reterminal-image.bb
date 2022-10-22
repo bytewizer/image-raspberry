@@ -11,10 +11,4 @@ IMAGE_FEATURES:append = " \
 IMAGE_INSTALL:append = " \
 		kernel-modules \
 		seeed-linux-dtoverlays \
-		i2c-tools \
-		openssh-sftp-server\
-		openssh \
-		openssl \
-		nano \
-		curl \ 
 	"

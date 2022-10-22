@@ -13,3 +13,7 @@ $ ./run-build.sh
 ### Supported machines
 
 - raspberrypi3-64
+
+## Links
+https://docs.yoctoproject.org/dev-manual/index.html
+https://www.lancesimms.com/RaspberryPi/HackingRaspberryPi4WithYocto_Introduction.html
