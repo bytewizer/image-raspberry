@@ -4,15 +4,15 @@ Flash Raspberry Pi OS to the eMMC storage of the CM4 on the reTerminal. Once the
 
 **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath.
 
-![Remove Screws](/images/reterminal/hw-remove-screws.png)
+![Remove Screws](/assets/reterminal/hw-remove-screws.png)
 
 **Step 2.** Remove the 2 screws to disassemble the heatsink.
 
-![Remove Heatsink](/images/reterminal/hw-remove-screws-heatsink.jpg)
+![Remove Heatsink](/assets/reterminal/hw-remove-screws-heatsink.jpg)
 
 **Step 3.** Flip down the boot mode switch according to the below diagram.
 
-![Boot Switch](/images/reterminal/hw-boot-switch.jpg)
+![Boot Switch](/assets/reterminal/hw-boot-switch.jpg)
 
 **Step 4.** Download the rpiboot setup installer by click this [link](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) to install the necessary drivers and the boot tool.
 
@@ -24,19 +24,19 @@ Flash Raspberry Pi OS to the eMMC storage of the CM4 on the reTerminal. Once the
 
 **Step 8.** Open Raspberry Pi Imager software
 
-![Raspberry Pi Imager](/images/reterminal/rpi-imager.png)
+![Raspberry Pi Imager](/assets/reterminal/rpi-imager.png)
 
 Press CTRL + SHIFT + X on the keyboard to open Advanced options window. Here you can set a hostname, enable SSH, set a password, configure wifi, set locale settings and more.
 
-![Raspberry Pi Imager](/images/reterminal/rpi-imager-advanced.png)
+![Raspberry Pi Imager](/assets/reterminal/rpi-imager-advanced.png)
 
 Click CHOOSE OS and select your preferred OS. 
 
-![Raspberry Pi Imager](/images/reterminal/rpi-imager-os.png)
+![Raspberry Pi Imager](/assets/reterminal/rpi-imager-os.png)
 
 Click CHOOSE STORAGE and select the connected eMMC drive.  Finally, click WRITE
 
-![Raspberry Pi Imager](/images/reterminal/rpi-imager-final.png)
+![Raspberry Pi Imager](/assets/reterminal/rpi-imager-final.png)
 
 Please wait a few minutes until the flashing process is complete. 
 
@@ -44,7 +44,7 @@ Please wait a few minutes until the flashing process is complete.
 
 # Pinout Diagram
 
-![Pinout](/images/rterminal/hw-pinout.jpg)
+![Pinout](/assets/rterminal/hw-pinout.jpg)
 
 **Note**: Please make sure to keep the reTerminal in the orientation as illustrated below. Here the LCD is facing right side and the back is facing left side.
 
@@ -52,7 +52,7 @@ Please wait a few minutes until the flashing process is complete.
 
 Connect jumper wires from a USB to Serial Converter to the UART pins on the 40-pin GPIO header of the reTerminal as follows.
 
-![Uart](/images/reterminal/hw-usb-uart.png)
+![Uart](/assets/reterminal/hw-usb-uart.png)
 
 # Resources
 [Getting Started with reTerminal](https://wiki.seeedstudio.com/reTerminal/)
