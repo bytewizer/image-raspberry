@@ -14,7 +14,6 @@ source ./poky/oe-init-build-env $BUILD_DIR
 
 # Add BSP layer
 bitbake-layers add-layer ../meta-reterminal
-bitbake-layers add-layer ../meta-dotnet
 bitbake-layers add-layer ../meta-rpilinux
 bitbake-layers add-layer ../poky/meta-raspberrypi
 bitbake-layers add-layer ../poky/meta-openembedded/meta-oe
@@ -39,4 +38,4 @@ bitbake-layers add-layer ../poky/meta-openembedded/meta-multimedia
 
 # Build
 #bitbake --dry-run $IMAGE
-bitbake $IMAGE
+#bitbake $IMAGE
