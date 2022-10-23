@@ -4,7 +4,7 @@ Flash Raspberry Pi OS to the eMMC storage of the CM4 on the reTerminal. Once the
 
 **Step 1.** Remove the 4 rubber covers and open the reTerminal back shell unscrewing the 4 screws underneath.
 
-![Remove Screws](/images/reterminal/hw-remove-screws.jpg)
+![Remove Screws](/images/reterminal/hw-remove-screws.png)
 
 **Step 2.** Remove the 2 screws to disassemble the heatsink.
 
@@ -44,7 +44,7 @@ Please wait a few minutes until the flashing process is complete.
 
 # Pinout Diagram
 
-![Pinout](/images/rterminal/hw-pinout-v2.jpg)
+![Pinout](/images/rterminal/hw-pinout.jpg)
 
 **Note**: Please make sure to keep the reTerminal in the orientation as illustrated below. Here the LCD is facing right side and the back is facing left side.
 
@@ -52,7 +52,7 @@ Please wait a few minutes until the flashing process is complete.
 
 Connect jumper wires from a USB to Serial Converter to the UART pins on the 40-pin GPIO header of the reTerminal as follows.
 
-![Uart](/images/rterminal/hw-usb-uart.png)
+![Uart](/images/reterminal/hw-usb-uart.png)
 
 # Resources
 [Getting Started with reTerminal](https://wiki.seeedstudio.com/reTerminal/)
