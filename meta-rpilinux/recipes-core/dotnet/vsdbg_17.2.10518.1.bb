@@ -3,8 +3,8 @@ HOMEPAGE = "https://github.com/Microsoft/MIEngine/wiki/Offroad-Debugging-of-.NET
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-SRC_URI[sha256sum] = "3e917d83500723545deecf54ceedda5f8bfaa422b3e8954732719d5d45041830q"
-SRC_URI = "https://vsdebugger.azureedge.net/vsdbg-${PV}/vsdbg-linux-x64.zip"
+SRC_URI[sha256sum] = "dbd5c399214ccdc88cf19eca550b3351eb38e4534b55dafcafed4197ef5fd253"
+SRC_URI = "https://vsdebugger.azureedge.net/vsdbg-17-2-10518-1/vsdbg-linux-x64.tar.gz"
 
 DEPENDS = "patchelf-native"
 

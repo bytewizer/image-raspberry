@@ -15,6 +15,7 @@ CORE_OS = "\
 	openssh \ 
 	openssl \
 	dotnet \
+	vsdbg \
 "
 
 KERNEL_EXTRA = "\
