@@ -14,8 +14,6 @@ CORE_OS = "\
 	openssh-sftp-server \
 	openssh \ 
 	openssl \
-	dotnet \
-	vsdbg \
 "
 
 KERNEL_EXTRA = "\
@@ -27,6 +25,7 @@ TOOLS_EXTRA = "\
 	bash \
 	nano \
 	curl \
+	dotnet-scripts \
 	i2c-tools \
 "
 
